@@ -12,6 +12,7 @@ class CustomInputText extends Component {
         placeholder={this.props.placeholder}
         secureTextEntry={this.props.secureTextEntry}
         name={this.props.name}
+        value={this.props.value}
         type={this.props.type}
         onChange={this.props.onChange}
         onChangeText={this.props.onChangeText}

@@ -22,7 +22,7 @@ const Home = ({ navigation }) => (
 );
 
 Home.navigationOptions = {
-  title: 'Home'
+  title: ''
 }
 
 export default Home;

@@ -13,14 +13,14 @@ export default class CadastroAluno extends React.Component {
   };
 
   state = {
-    cpf: null,
-    nome: null,
-    endereco: null,
-    uf: null,
-    municipio: null,
-    telefone: null,
-    email: null,
-    senha: null,
+    cpf: '',
+    nome: '',
+    endereco: '',
+    uf: '',
+    municipio: '',
+    telefone: '',
+    email: '',
+    senha: '',
 
     errorMessage: null,
     successMessage: null,
@@ -47,14 +47,14 @@ export default class CadastroAluno extends React.Component {
         this.setState({ 
             successMessage: "Cadastro Realizado!",
             errorMessage: null,
-            cpf: null,
-            nome: null,
-            endereco: null,
-            uf: null,
-            municipio: null,
-            telefone: null,
-            email: null,
-            senha: null,
+            cpf: '',
+            nome: '',
+            endereco: '',
+            uf: '',
+            municipio: '',
+            telefone: '',
+            email: '',
+            senha: '',
         });
     }catch (response) {
         this.setState({ 
@@ -82,13 +82,13 @@ export default class CadastroAluno extends React.Component {
             { this.state.errorMessage && <Text style={defaultStyle.erroMessage}>{ this.state.errorMessage } </Text> }
 
             <TextInputMask type={'cpf'} style={[defaultStyle.inputText, {width: 250}]} placeholder="cpf" placeholderTextColor="#FFF" value={this.state.cpf} onChangeText={text => { this.setState({ cpf: text })}} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="nome"  onChangeText={(nome) => this.setState({nome})} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="endereco"  onChangeText={(endereco) => this.setState({endereco})} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="uf"  onChangeText={(uf) => this.setState({uf})} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="municipio"  onChangeText={(municipio) => this.setState({municipio})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="nome" value={this.state.nome} onChangeText={(nome) => this.setState({nome})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="endereco" value={this.state.endereco}  onChangeText={(endereco) => this.setState({endereco})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="uf" value={this.state.uf}  onChangeText={(uf) => this.setState({uf})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="municipio" value={this.state.municipio}  onChangeText={(municipio) => this.setState({municipio})} clearButtonMode='always'/>
             <TextInputMask type={'cel-phone'} options={{maskType: 'BRL', withDDD: true, dddMask: '(99) '}} style={[defaultStyle.inputText, {width: 250}]} placeholder="telefone" placeholderTextColor="#FFF" value={this.state.telefone} onChangeText={text => { this.setState({ telefone: text })}} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="email"  onChangeText={(email) => this.setState({email})} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="senha" secureTextEntry={true} onChangeText={(senha) => this.setState({senha})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="email" value={this.state.email}  onChangeText={(email) => this.setState({email})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="senha" secureTextEntry={true} value={this.state.senha} onChangeText={(senha) => this.setState({senha})} clearButtonMode='always'/>
 
             <TouchableOpacity onPress={this.cadastrar}>
                 <Text style={[defaultStyle.button, {marginTop: 25}]}>Cadastrar</Text>

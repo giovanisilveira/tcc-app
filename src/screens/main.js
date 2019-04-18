@@ -5,7 +5,7 @@ import { AsyncStorage } from 'react-native';
 
 export default class Main extends React.Component {
   static navigationOptions = {
-    title: 'Main',
+    title: '',
   };
 
   state = {
