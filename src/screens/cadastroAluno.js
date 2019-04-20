@@ -84,7 +84,7 @@ export default class CadastroAluno extends React.Component {
             <TextInputMask type={'cpf'} style={[defaultStyle.inputText, {width: 250}]} placeholder="cpf" placeholderTextColor="#FFF" value={this.state.cpf} onChangeText={text => { this.setState({ cpf: text })}} clearButtonMode='always'/>
             <CustomInputText style={{width: 250}} placeholder="nome" value={this.state.nome} onChangeText={(nome) => this.setState({nome})} clearButtonMode='always'/>
             <CustomInputText style={{width: 250}} placeholder="endereco" value={this.state.endereco}  onChangeText={(endereco) => this.setState({endereco})} clearButtonMode='always'/>
-            <CustomInputText style={{width: 250}} placeholder="uf" value={this.state.uf}  onChangeText={(uf) => this.setState({uf})} clearButtonMode='always'/>
+            <CustomInputText style={{width: 250}} placeholder="uf" value={this.state.uf}  onChangeText={(uf) => this.setState({uf})} clearButtonMode='always' autoCapitalize='characters'/>
             <CustomInputText style={{width: 250}} placeholder="municipio" value={this.state.municipio}  onChangeText={(municipio) => this.setState({municipio})} clearButtonMode='always'/>
             <TextInputMask type={'cel-phone'} options={{maskType: 'BRL', withDDD: true, dddMask: '(99) '}} style={[defaultStyle.inputText, {width: 250}]} placeholder="telefone" placeholderTextColor="#FFF" value={this.state.telefone} onChangeText={text => { this.setState({ telefone: text })}} clearButtonMode='always'/>
             <CustomInputText style={{width: 250}} placeholder="email" value={this.state.email}  onChangeText={(email) => this.setState({email})} clearButtonMode='always'/>

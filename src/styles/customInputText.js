@@ -13,6 +13,7 @@ class CustomInputText extends Component {
         secureTextEntry={this.props.secureTextEntry}
         name={this.props.name}
         value={this.props.value}
+        autoCapitalize={this.props.autoCapitalize}
         type={this.props.type}
         onChange={this.props.onChange}
         onChangeText={this.props.onChangeText}
